@@ -1,0 +1,57 @@
+<!--Author:Leslie Brockman
+    Date: O7/12/2026
+    Biosite Template Page-->
+
+<!DOCTYPE html> 
+<html lang="en">
+<!-- Final font style will be linked through google and CSS-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biosite-template</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+<!-- Nav a links will be styled as buttons in the css-->
+<header>
+    <h1>
+        <span class="lang-en">Where is Doctor Sayifa?</span>
+        <span class="lang-ar hidden">أين الدكتور سيفه؟</span>
+    </h1>
+<!--this is the bilingual toggle button that will be used to switch between English and Arabic, js will be added for functionality-->
+    <div class="language-toggle">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+                    <span class="lang-en">English | العربية</span>
+                    <span class="lang-ar hidden">العربية | English</span>
+                </button>
+    </div>
+    <nav>
+        <ul class ="link-nav">
+            <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-ar hidden">الرئيسية</span></a></li>
+            <li><a href="about.html"><span class="lang-en">About</span><span class="lang-ar hidden">حول</span></a></li>
+            <li><a href="https://american-nobody999.github.io/One-match"><span class="lang-en">MPGA</span><span class="lang-ar hidden">MPGA</span></a></li>
+        </ul>
+<!-- Hamburger for Mobile--DO NOT TOUCH THIS!!!!!--EVER!-->
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+    </nav>
+</header>
+
+<main>
+</main>
+
+<footer>
+    <div class="footer-content">
+<!--This is the Leslie Design logo once we all have images-->
+    <img src="images/logo.png" alt="Description of image">
+    <p><span class="lang-en">&copy; 2026 American Nobody</span><span class="lang-ar hidden">&copy; 2026 أمريكان نوبودي</span></p>
+<!--This will be the MPGA logo once we have all images-->
+    <img src="images/logo.png" alt="Description of image">
+    </div>
+</footer>
+
+</body>
+</html>
