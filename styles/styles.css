@@ -1,0 +1,33 @@
+/* Shared utility class for language visibility toggling */
+.hidden {
+    display: none !important;
+}
+
+/* Horizontal gallery scrolling behavior--using same css as MPGA 2 section 3 div, this isnt going to work--its just a place holder for deliverables. keeping pusdos for buttons, adding the gallery images designs in the scroll-gallery for better performance. I want it to grab it when the cursior hoovers and pop and scroll smoothly, 3 coloumns showing with the 9 images */
+.scrolling-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0.25rem;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-gallery.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+}
+
+.gallery-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments for  1280, 1000, 780, 420 and 320 will be added and layered as as images and design incorporated. Color pallet 214 (neutral colors, with whites and grays and blues) */
