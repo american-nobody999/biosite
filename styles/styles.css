@@ -30,4 +30,139 @@
     height: auto;
 }
 
-/* Responsive adjustments for  1280, 1000, 780, 420 and 320 will be added and layered as as images and design incorporated. Color pallet 214 (neutral colors, with whites and grays and blues) */
+/* Soft blue borders for div containers */
+div {
+    border: 1px solid #b9d7f0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Stack sections vertically */
+section {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Inline-block elements within sections */
+section > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Keep gallery scrolling layout as flex */
+section .scrolling-gallery {
+    display: flex;
+}
+
+/* Single border around the full header and centered content */
+header {
+    border: 1px solid #b9d7f0;
+    border-radius: 12px;
+    background: #f4f9ff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Remove individual div borders inside header */
+header div {
+    border: none;
+    border-radius: 0;
+}
+
+/* Nav container styling */
+nav {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+.link-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Button style for nav links */
+.link-nav li a {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #8fc0e8;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #eef7ff 0%, #dcefff 100%);
+    color: #154466;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-nav li a:hover,
+.link-nav li a:focus-visible {
+    background: linear-gradient(180deg, #dff0ff 0%, #c9e6ff 100%);
+    box-shadow: 0 6px 14px rgba(28, 96, 145, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Match language toggle button to nav link button styling */
+.lang-toggle {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #8fc0e8;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #eef7ff 0%, #dcefff 100%);
+    color: #154466;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+    background: linear-gradient(180deg, #dff0ff 0%, #c9e6ff 100%);
+    box-shadow: 0 6px 14px rgba(28, 96, 145, 0.18);
+    transform: translateY(-1px);
+}
+
+
+
+/* ============================== */
+/* Large Desktop Media Query      */
+/* 1440px and up                  */
+/* ============================== */
+@media (min-width: 1440px) {
+    /* Add large desktop styles here */
+}
+
+/* ============================== */
+/* Desktop Media Query            */
+/* 1024px to 1439px               */
+/* ============================== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    /* Add desktop styles here */
+}
+
+/* ============================== */
+/* Tablet Media Query             */
+/* 768px to 1023px                */
+/* ============================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Add tablet styles here */
+}
+
+/* ============================== */
+/* Mobile Media Query             */
+/* 767px and below                */
+/* ============================== */
+@media (max-width: 767px) {
+    /* Add mobile styles here */
+}
