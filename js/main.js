@@ -2,9 +2,36 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 	initLanguageToggle();
+	initMobileNavToggle();
 	initScrollableGallery();
 });
+/*left the hamburger only visible on mobile, and the nav links are hidden until the hamburger is clicked. The hamburger will disappear when the screen is resized to desktop size, and the nav links will be visible again.*/
 
+function initMobileNavToggle() {
+	const menuToggleButton = document.getElementById("menu-toggle");
+	const nav = document.querySelector("header nav");
+
+	if (!menuToggleButton || !nav) {
+		return;
+	}
+
+	const closeNav = () => {
+		nav.classList.remove("is-open");
+		menuToggleButton.setAttribute("aria-expanded", "false");
+	};
+
+	menuToggleButton.addEventListener("click", () => {
+		const isOpen = nav.classList.toggle("is-open");
+		menuToggleButton.setAttribute("aria-expanded", String(isOpen));
+	});
+
+	window.addEventListener("resize", () => {
+		if (window.innerWidth >= 1024) {
+			closeNav();
+		}
+	});
+}
+/*This function initializes the language toggle functionality. It switches between English and Arabic content on the page when the toggle button is clicked. It also updates the document's language and text direction attributes accordingly to remove extra html. lang-en and lang-ar are the respective span classes*/
 function initLanguageToggle() {
 	const toggleButton = document.getElementById("lang-toggle");
 	if (!toggleButton) {
@@ -34,7 +61,7 @@ function initLanguageToggle() {
 
 	applyLanguageState();
 }
-
+/*This function initializes the scrollable gallery functionality. It allows users to scroll through gallery items using mouse wheel, arrow keys, and drag gestures. It also ensures that the gallery is accessible via keyboard navigation for accessibility. Pop baby pop.*/
 
 function initScrollableGallery() {
 	const galleries = document.querySelectorAll(".scrolling-gallery");
@@ -100,3 +127,4 @@ function initScrollableGallery() {
 		gallery.addEventListener("pointerleave", stopDragging);
 	});
 }
+
